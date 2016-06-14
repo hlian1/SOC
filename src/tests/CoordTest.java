@@ -53,13 +53,16 @@ public class CoordTest {
 		c.shiftXY(2, -1);
 		
 		assertEquals(a,c);
-		
-		
-		
+		assertFalse(b.equals(c));
 	}
 	
 	@Test
 	public void mutabilityTest() {
+		
+	}
+	
+	@Test
+	public void hashCodeUniquenessTest() {
 		
 	}
 
