@@ -151,15 +151,9 @@ public class Coord {
 	 * 		this.y equals o.y
 	 */
 	public boolean equals(Object o) {
-//		if (o == null)
-//			return false;
-		try {
-			Coord c = (Coord) o;
-			return this.x == c.x && this.y == c.y;
-		} catch ( Exception e ) {
-			System.out.println("Excpetion encoutnered: " + e.getClass());
-			return false;
-		}
+		if (! (o instanceof Coord) ) return false;
+		Coord c = (Coord) o;
+		return this.x == c.x && this.y == c.y;
 	}
 	
 	/**
