@@ -123,10 +123,10 @@ public class ResHex {
 	
 	/**
 	 * Returns a String representation of this object as: 
-	 * 	ResHex (x,y) [dice number] [BLOCKED/UNBLOCKED]
+	 * 	HEXAGON (x,y) [dice number] [BLOCKED/UNBLOCKED]
 	 */
 	public String toString() { 
-		return "ResHex " 
+		return "HEXAGON " 
 				+ this.coord.toString() 
 				+ " " + this.res.toString() 
 				+ " " + this.dice + " " 
@@ -135,6 +135,7 @@ public class ResHex {
 	
 	/**
 	 * DOES NOT RETURN A NEW COPY OF THIS OBJECT.
+	 * Use makeDeepCopy() for a new instance of this object.
 	 * 
 	 * Returns a shallow copy.
 	 */
