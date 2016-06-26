@@ -9,7 +9,7 @@ package objects;
  * NOTE: The hashCode() method has limitations.
  * 
  * @author Hau Lian
- * @version Sunday, June 12th, 2016 19:34
+ * @version Sunday, June 26th, 2016 0953
  *
  */
 public class Coord {
@@ -153,6 +153,7 @@ public class Coord {
 	public boolean equals(Object o) {
 		if (! (o instanceof Coord) ) return false;
 		Coord c = (Coord) o;
+		if ( this.hashCode() != c.hashCode() ) return false;
 		return this.x == c.x && this.y == c.y;
 	}
 	
