@@ -14,7 +14,7 @@ public class ResHex {
 	/**
 	 * Coordinate of this Resource Hexagon.
 	 */
-	private final Coord coord;
+	private Coord coord;
 	
 	/**
 	 * The resource type of this hexagon.  Must be one of the 5 resource of SOC.
@@ -27,9 +27,16 @@ public class ResHex {
 	private final int dice;
 	
 	/**
+	 * True if this hexagon as at least 1 port.
+	 */
+	//private final boolean hasPort;
+	
+	/**
 	 * Boolean variable.  True if the resource hexagon is blocked.  False otherwise.
 	 */
 	private boolean isBlocked = false;
+	
+	
 	
 	/**
 	 * Creates a new resource hexagon object.
