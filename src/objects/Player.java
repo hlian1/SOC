@@ -1,5 +1,8 @@
 package objects;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.Vector;
 import enums.BuildingMaterial;
 import enums.DevType;
@@ -15,6 +18,11 @@ import sm.SM;
  */
 public class Player {
 
+	private Socket socket;
+    private PrintWriter socketOut;
+    private BufferedReader socketIn;
+    private boolean socketBroken = true;
+	
 	private final String NAME;
 	private final long ID;
 	private int vp;
@@ -33,7 +41,9 @@ public class Player {
 	public void addVP(int vp) { this.vp += vp; }
 	public void subtractVP(int vp) { addVP(-vp); }
 	public void addResource(Resource r) { this.res.add(new ResCard(r)); }
+	public void useResource(Resource r) { this.res.remove(new ResCard(r)); }
 	public void addDevCard(DevType t) { this.dev.add(new DevCard(t)); }
+	public void useDevCard(DevType t) { this.dev.get(this.dev.indexOf(new DevCard(t))).use(); }
 	public void addMaterials(BuildingMaterial b) { this.material.add(b); }
 	public void setLongestRoad(int length) { this.longestRoad = length; }
 	public void buildRoad(Road r) { this.roads.add(r); }
