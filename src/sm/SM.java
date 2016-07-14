@@ -7,6 +7,7 @@ import java.util.Vector;
 
 import enums.DevType;
 import enums.Resource;
+import objects.Board;
 import objects.Coord;
 import objects.DevCard;
 import objects.ResHex;
@@ -149,5 +150,10 @@ public class SM {
 			if ( s.getPlayerID() == id )
 				return true;
 		return false;
+	}
+	
+	public static int calcLongestRoad(Board b) {
+		//TODO: Implement
+		return -1;
 	}
 }
